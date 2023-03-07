@@ -16,3 +16,5 @@ jobs:
         with:
           name: PDF
           path: cv.pdf
+      - name: Add PDF file to the repo
+        uses: oftprops/action-gh-release
