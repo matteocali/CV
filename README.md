@@ -1,72 +1,11 @@
-YAAC: Another Awesome CV [![CircleCI](https://circleci.com/gh/darwiin/yaac-another-awesome-cv.svg?style=svg)](https://circleci.com/gh/darwiin/yaac-another-awesome-cv) [![Example](https://img.shields.io/badge/Exemple-pdf-blue.svg)](https://github.com/darwiin/yaac-another-awesome-cv/releases/download/v1.8.0/cv.pdf)
+PERSONAL CV
 =================
 
-## Quick start
+## Template info
 
-You can edit online **YAAC: Another Awesome CV** template on [Overleaf](https://www.overleaf.com/latex/templates/awesome-source-cv/wrdjtkkytqcw). Feel free to use my [referal link](https://www.overleaf.com/signup?ref=54c221604cd6) if you want to create your account.
+This CV is based on a modified version of the **![YAAC: Another Awesome CV](https://github.com/darwiin/yaac-another-awesome-cv)** template.
 
-## About
-
-**YAAC: Another Awesome CV** was first based on a CV template from Alessandro Plasmati. This template used _XeLaTeX_ engine and _[Fontin Sans](http://www.exljbris.com/fontinsans.html)_ font. 
-
-**Personal data** has moved on top of the first page just before the position and _[Fontin Sans](http://www.exljbris.com/fontinsans.html)_ font has been replaced by _[Source Sans Pro Font](https://github.com/adobe-fonts/source-sans-pro)_ from Adobe. _[Font Awesome](http://fontawesome.io/)_ icons highlight important elements.
-
-Unlike _Alessandro Plasmati_ CV template, all layout stuff in **YAAC: Another Awesome CV** has moved in the Latex class file _yaac-another-awesome-cv.cls_ to improve source code readability and style reusability.
-
-More informations about the original Alessandro Plasmati template can be found here :
-
-   -  [ Scribd ](http://fr.scribd.com/doc/16335667/Writing-your-Professional-CV-with-LaTeX)
-   -  [ LaTeX Templates ](http://www.latextemplates.com/template/plasmati-graduate-cv)
-   -  [ ShareLatex ](https://www.sharelatex.com/templates/cv-or-resume/professional-cv)
-
-## Preview
-
-### Normal style
-
-| Page. 1 | Page. 2 |
-|:---:|:---:|
-| ![Résumé](example/preview/cv1.jpeg) | ![Résumé](example/preview/cv2.jpeg) |
-
-### Alternative style
-
-| Page. 1 | Page. 2 |
-|:---:|:---:|
-| ![Résumé](example/preview/cv1-alternative.jpeg) | ![Résumé](example/preview/cv2-alternative.jpeg) |
-
-## How to use **YAAC: Another Awesome CV** latex class
-
-### Use the **YAAC: Another Awesome CV** options
-
-When declaring the `\documentclass` you can use option(s) to customize your CV rendering.
-1. **localFont** to use the fonts included in the _fonts_ folder
-2. **alternative** to use the _alternative header_ layout
-3. **10pt** or **11pt** or **12pt** to change the font size
-4. **compact** to reduce vertical space between you experience entries
-
-
-```latex
-% Used with no option, the template will use the 'traditional' 
-% header layout your system fonts and the default color scheme ie. blue
-\documentclass{yaac-another-awesome-cv}
-
-% Used with localFont option the template will use the 'traditional' 
-% header layout, fonts included in the fonts directory and the default color scheme
-\documentclass[localFont]{yaac-another-awesome-cv}
-
-% Used with alternative option, the template will use the 'alternative' 
-% header layout, your system fonts and the default color scheme
-\documentclass[alternative]{yaac-another-awesome-cv}
-
-% Used with localFont, alternative and 10pt options the template will use the 'alternative' 
-% header layout, fonts included in the fonts directory, the default color scheme and the '10pt' font size.
-% Based on the article document class, size options are 10pt, 11pt and 12pt
-\documentclass[localFont,alternative,10pt]{yaac-another-awesome-cv}
-
-% Used with 'compact' option the template will use the compact experience layout 
-% Feel free to use this option with the others that are available
-\documentclass[compact]{yaac-another-awesome-cv}
-
-```
+## Settings
 
 ### Construct the header
 
@@ -318,10 +257,3 @@ Then you can list your references as follow:
   % Or for the full list without separating by type
   \printbibliography[heading={none}]
 ```
-
-
-## License
-
-Latex class file _yaac-another-awesome-cv_ is published under the term of the [LPPL Version 1.3c](https://www.latex-project.org/lppl.txt).
-
-All content files are published under the term of the [CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/legalcode).
