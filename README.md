@@ -257,3 +257,4 @@ Then you can list your references as follow:
   % Or for the full list without separating by type
   \printbibliography[heading={none}]
 ```
+
