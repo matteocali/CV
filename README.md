@@ -3,7 +3,7 @@ PERSONAL CV
 
 ## Template info
 
-This CV is based on a modified version of the **![YAAC: Another Awesome CV](https://github.com/darwiin/yaac-another-awesome-cv)** template.
+This CV is based on a modified version of the **[YAAC: Another Awesome CV](https://github.com/darwiin/yaac-another-awesome-cv)** template.
 
 ## Settings
 
