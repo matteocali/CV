@@ -581,7 +581,11 @@
 }
 
 %% Bibliography
-\usepackage[backend=biber,style=authoryear,natbib=true]{biblatex} 
+\usepackage[backend=biber,style=authoryear,natbib=true,sorting=ydnt,maxbibnames=3,minbibnames=3]{biblatex}
+\renewbibmacro*{finentry}{%
+  \setunit{\finentrypunct\par}%
+  \usebibmacro{abstract}%
+  \finentry}
 
 \newcounter{bibitem}
 \AtBeginBibliography{\setcounter{bibitem}{1}}
