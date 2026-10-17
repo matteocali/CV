@@ -1,29 +1,34 @@
 % !TEX program = lualatex
-% Awesome Source CV LaTeX Template
+% !BIB program = biber
+% Based on YAAC: Another Awesome CV LaTeX Template
+% https://github.com/darwiin/yaac-another-awesome-cv
 %
-% This template has been downloaded from:
-% https://github.com/darwiin/awesome-neue-latex-cv
-%
-% Author:
+% Authors:
 % Christophe Roger (Darwiin)
+% Publications section by Lambtho12, based on the template of LianTze Lim
+% https://www.overleaf.com/latex/templates/a-customised-curve-cv/mvmbhkwsnmwv
 %
-% Template license:
+% Template license (applies to all files in this project):
 % CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
 
 \documentclass[localFont, alternative, lightblue]{yaac-another-awesome-cv}
 
+% total page count in the footer
+\usepackage{lastpage}
+
 \name{Matteo}{Caligiuri}
-\tagline{Ph.D. Student | Università degli Studi di Padova}
+\tagline{Senior Research Engineer | Ph.D. in Artificial Intelligence}
 % \photo{2.5cm}{images/profile-pic}
 \socialinfo{
-	\linkedin{matteo-caligiuri}
-	\website{https://www.matteocali.github.io}{matteocali.github.io}
-	\github{matteocali}\\
-	\smartphone{+39 3453055710}
-	\email{matteo.caligiuri@ik.me}\\
-	\address{Castelfranco Veneto (TV), Italia}\\
-	% \address{Via Amerigo Vespucci 17/B, 31033 Castelfranco Veneto (TV), Italia}\\
-	% \infos{Born the 25\textsuperscript{th} September 1998 in Castelfranco Veneto, TV, Italy}
+    \linkedin{matteo-caligiuri}
+    \website{https://matteocali.github.io}{matteocali.github.io}
+    \website{https://scholar.google.com/citations?user=CVE4_sAAAAAJ}{Google Scholar}
+    \github{matteocali}\\
+    \smartphone{+39 3453055710}
+    \email{matteo.caligiuri@ik.me}\\
+    \address{Castelfranco Veneto (TV), Italia}\\
+    % \address{Via Amerigo Vespucci 17/B, 31033 Castelfranco Veneto (TV), Italia}\\
+    % \infos{Born the 25\textsuperscript{th} September 1998 in Castelfranco Veneto, TV, Italy}
 }
 
 % Uncomment the following line and use a value from 1.5cm to 2.5cm
@@ -32,22 +37,51 @@
 % Uncomment to add the bibliography (see section_publications.tex)
 \addbibresource{my_publications.bib}
 
+% Print every author as "Given Family" (authoryear inverts the first one by default)
+\DeclareNameAlias{sortname}{given-family}
+% Highlight my name and mark equal contributions (author+an = {n=equal})
+\renewcommand*{\mkbibnamefamily}[1]{%
+    \ifdefstring{\namepartfamily}{Caligiuri}{\textbf{#1}}{#1}%
+    \ifitemannotation{equal}{\textsuperscript{*}}{}}
+\renewcommand*{\mkbibnamegiven}[1]{%
+    \ifdefstring{\namepartfamily}{Caligiuri}{\textbf{#1}}{#1}}
+
+% Abstracts are hidden to keep the CV on two pages.
+% To print them only for entries with the "abstract" keyword, swap the two lines below.
+\AtEveryBibitem{\clearfield{abstract}}
+% \AtEveryBibitem{\ifkeyword{abstract}{}{\clearfield{abstract}}}
+
 \begin{document}
+    % Header
+    \makecvheader
 
-	\makecvheader
+    % Footer: date, title, page number (no blank lines between the arguments)
+    \makecvfooter
+    {\textsc{\selectlanguage{english}\today}}
+    {\textsc{Matteo Caligiuri} \textperiodcentered{} Ph.D.}
+    {\thepage/\pageref{LastPage}}
 
-	\makecvfooter
-	    % Date
-	    {\textsc{\selectlanguage{english}\today}}
-		{\textsc{Matteo Caligiuri - CV}}
-		{\thepage}
+    % Headline
+    \input{sections/section_headline}
 
-	\input{sections/section_headline}
-	\input{sections/section_experience_short}		% Section experiences
-	\input{sections/section_formation}				% Section formation
-	\input{sections/section_skills}				    % Section skills
-	% \input{sections/section_languages}			    % Section languages
-	\input{sections/section_publications}			% Section publications
-	\input{sections/section_projects}               % Section projects
-	%\input{section_conformity}                     % Conformity
+    % Experiences
+    \input{sections/section_experience_short}
+    
+    % Education
+    \input{sections/section_education}
+
+    % Skils
+    \input{sections/section_skills}
+
+    % Languages
+    % \input{sections/section_languages}
+
+    % Pubblications
+    \input{sections/section_publications}
+
+    % Projects
+    \input{sections/section_projects}
+
+    % Conformity
+    %\input{section_conformity}
 \end{document}

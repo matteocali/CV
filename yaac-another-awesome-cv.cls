@@ -36,6 +36,10 @@
   \def\@lightblue{lightblue}
 }
 
+\DeclareOption{teal}{
+  \def\@teal{teal}
+}
+
 \DeclareOption{red}{
   \def\@red{red}
 }
@@ -70,11 +74,12 @@
 \RequirePackage[utf8]{luainputenc}
 \RequirePackage{fontspec} 				% for loading fonts
 \RequirePackage{url,parskip} 	    % other packages for formatting
-\RequirePackage[usenames,dvipsnames]{xcolor}
+\RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{fullpage}
 \RequirePackage[margin=1.5cm]{geometry}
 \RequirePackage[fixed]{fontawesome5}
 \RequirePackage{hyperref}
+\RequirePackage{bookmark}   % PDF outlines in a single pass (no rerun needed)
 \RequirePackage{titlesec}
 \RequirePackage{array}
 \RequirePackage{enumitem}
@@ -110,6 +115,7 @@
   { \definecolor{basecolor}{HTML}{b30000} }     %RED
 }
 { \definecolor{basecolor}{HTML}{0066cc} }
+\ifdef{\@teal}{ \definecolor{basecolor}{HTML}{0F766E} }{}     %TEAL
 
 \definecolor{darkGrey}{HTML}{989898}
 

@@ -1,3 +1,48 @@
 {
-    "latex-workshop.latex.recipe.default": "latexmk (lualatex)"
+    "latex-workshop.latex.recipe.default": "latexmk (lualatex)",
+    // Always build with the latexmk recipe (runs Biber and the needed reruns),
+    // even if a "% !TEX program" magic comment is present
+    "latex-workshop.latex.build.enableMagicComments": true,
+    "latex-workshop.formatting.latex": "tex-fmt",
+    "latex-workshop.formatting.tex-fmt.path": "/opt/homebrew/bin/tex-fmt",
+    "[latex]": {
+        "editor.defaultFormatter": "James-Yu.latex-workshop"
+    },
+    // Spell-check only the text sections: skip template, build and config files
+    "cSpell.ignorePaths": [
+        "*.cls",
+        "*.sty",
+        "*.bib",
+        "*.toml",
+        ".latexmkrc",
+        ".vscode/**",
+        ".github/**",
+        "fonts/**",
+        "cv.tex",
+        "sections/section_publications.tex",
+        "**/texmf-dist/**"
+    ],
+    // Proper nouns, acronyms and tools used in the CV
+    "cSpell.words": [
+        "Caligiuri", "NablaWave", "Università", "degli", "Studi", "Padova",
+        "Castelfranco", "Veneto", "Giorgione", "Ginnasio", "Taglio", "Castello",
+        "ICCV", "ICCVW", "ECCV", "WACV", "ICPR", "IEIT", "MELEX", "WIoT",
+        "SynDrone", "FlyAware", "FlyAwareV2", "FedPromo", "FedSSG", "EFFEKT", "TASSO", "WILSS",
+        "iToF", "NLoS", "Jetson", "Mitsuba", "CARLA", "LoRA", "VLMs",
+        "YAAC", "xcolor", "biblatex", "keywordsentry", "scholarshipentry", "faSuitcase",
+        "matteo-caligiuri", "matteocali", "Castelfranco"
+    ],
+    // LTeX checks only LaTeX and Markdown documents; template files are not checked
+    "ltex.enabled": ["latex", "markdown"],
+    "ltex.dictionary": {
+        "en-US": [
+            "Caligiuri", "NablaWave", "Università", "degli", "Studi", "Padova",
+            "ICCV", "ICCVW", "ECCV", "WACV", "ICPR", "WIoT",
+            "SynDrone", "FlyAware", "FlyAwareV2", "ToF", "iToF", "NLoS", "Jetson", "Mitsuba", "CARLA", "LoRA"
+        ]
+    },
+    // "{Padova, Italy}{Padova, Italy}"-style macro arguments trigger false word-repeat warnings
+    "ltex.disabledRules": {
+        "en-US": ["ENGLISH_WORD_REPEAT_RULE"]
+    }
 }

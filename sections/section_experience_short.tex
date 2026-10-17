@@ -1,62 +1,47 @@
-% YAAC Another Awesome CV LaTeX Template
-%
-% This template has been downloaded from:
-% https://github.com/darwiin/yaac-another-awesome-cv
-%
-% Author:
-% Christophe Roger
-%
-% Template license:
-% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
-
 % Section: Work Experience at the top
 \sectionTitle{Professional experiences}{\faSuitcase}
-%\renewcommand{\labelitemi}{$\bullet$}
 \begin{experiences}
     \experience
-        {Present}            {Senior Research Engineer}{NablaWave S.R.L.}{Padova, Italy}
-        {June 2026}       {\begin{itemize}
-                                 \item Develop and implement digital twins of complex systems and industrial machinery.
-                                 \item Combine physics-based mathematical modeling with Machine Learning and Deep Learning techniques to simulate, monitor, and predict system behavior.
-                                 \item Build and deploy containerized pipelines that integrate the models into production environments.
-                             \end{itemize}
-                            }
-                            {Python, PyTorch, Docker, Linux, Git, \LaTeX}
+    {Present}   {Senior Research Engineer}{NablaWave s.r.l.}{Padova, Italy}
+    {June 2026} {
+        \begin{itemize}
+            \item Develop and implement digital twins of complex systems and industrial machinery.
+            \item Combine physics-based mathematical modeling with Machine Learning (ML) and Deep Learning techniques to simulate, monitor, and predict system behavior.
+            \item Build and deploy containerized pipelines that integrate the models into production environments.
+        \end{itemize}
+    }
+    {Python, PyTorch, Docker, Linux, Git}
     \emptySeparator
     \experience
-        {June 2026}            {Ph.D. Scholarship}{Università Degli Studi di Padova}{Padova, Italy}
-        {January 2023}       {\begin{itemize}
-                                 \item Developed Federated Learning (FL) solutions for heterogeneous clients, specifically focusing on drones and cars in urban environments. 
-                                 \item Investigated the impact of varying weather conditions on FL performance for CV tasks.
-                                 \item Created a custom synthetic dataset to simulate diverse urban scenarios and weather conditions.
-                             \end{itemize}
-                            }
-                            {Python, Pytorch, ToF sensors, MATLAB, Bash, \LaTeX}
+    {June 2026}    {Ph.D. Scholarship}{Università degli Studi di Padova}{Padova, Italy}
+    {January 2023} {
+        \begin{itemize}
+            \item Research on Federated Learning (FL) for Computer Vision (CV), focusing on classification and semantic segmentation for autonomous cars and drones in urban environments.
+            \item Developed FL and source-free domain adaptation methods robust to adverse weather conditions, published at top CV venues (ICCV, WACV, ECCV).
+            \item Built synthetic multi-modal UAV datasets with the CARLA simulator (SynDrone, FlyAware/FlyAwareV2) for synthetic-to-real adaptation.
+        \end{itemize}
+    }
+    {Python, PyTorch, Federated Learning, CARLA, ToF sensors, MATLAB, Bash, \LaTeX}
     \emptySeparator
     \experience
-        {December 2025}      {Visiting Ph.D.}{Nortehastern University - WIoT lab}{Boston (MA), USA}
-        {September 2025}       {\begin{itemize}
-                                 \item Developed novel federated learning frameworks for resource-constrained edge devices.
-                                \item Deployed and tested distributed learning systems across embedded computing platforms
-                                \item Bridged theoretical research with practical hardware implementation on low-power networks
-                             \end{itemize}
-                            }
-                            {Python, Pytorch, Federated Learning, Foundation Model, NVIDIA Jetson, Raspberry Pi}
+    {December 2025}  {Visiting Ph.D.}{Northeastern University - WIoT lab}{Boston (MA), USA}
+    {September 2025} {
+        \begin{itemize}
+            \item Developed Federated Learning frameworks transferring knowledge from lightweight edge models to foundation models (LoRA adapters) for CV tasks.
+            \item Deployed and tested distributed learning systems, including foundation models, on embedded platforms.
+            \item Bridged theoretical research with practical hardware implementation on low-power networks.
+        \end{itemize}
+    }
+    {Python, PyTorch, Federated Learning, Foundation Models, NVIDIA Jetson, Raspberry Pi}
     \emptySeparator
     \experience
-        {September 2022}    {Master Thesis Internship}{Sony Europe B.V.}{Stuttgart, Germany}
-        {April 2022}        {\begin{itemize}
-                                 \item I've worked in the R\&D department as an intern to perform my Master's thesis project. The project aims to perform a feasibility study on the field of Non-Line-of-Sight (NLoS) imaging using indirect Time of Flight and Deep Learning. Other than that I've also generated a novel dataset for (NLoS) imaging using Mitsuba 2 and Blender
-                             \end{itemize}
-                            }
-                            {ToF sensors, Python, Mitsuba 2, Blender, MATLAB, Bash, \LaTeX}
-    % \emptySeparator
-    % \experienceNoTech
-    %     {November 2021}     {Pizza Maker}{Pizza Al Taglio Al Castello}{Italy}
-    %     {September 2018}    {\begin{itemize}
-    %                             \item Produce pizza and cook pizza                   
-    %                          \end{itemize}
-    %                         }
-                    
-    %\newpage
+    {September 2022} {Master Thesis Internship}{Sony Europe B.V.}{Stuttgart, Germany}
+    {April 2022}     {
+        \begin{itemize}
+            \item Master's thesis in the R\&D department: feasibility study on Non-Line-of-Sight (NLoS) imaging with indirect Time-of-Flight (iToF) sensors and Deep Learning.
+            \item Generated a novel synthetic dataset for NLoS imaging using Mitsuba 2 and Blender.
+            \item Results later extended and published at ECCV 2024 (NIGHT).
+        \end{itemize}
+    }
+    {ToF sensors, Python, Mitsuba 2, Blender, MATLAB, Bash, \LaTeX}
 \end{experiences}
